@@ -1,6 +1,6 @@
 import React from "react";
 import useStorage from "./hooks/useStorage";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 function ProgressBar({ file, setFile }) {
   const { url, progress } = useStorage(file);

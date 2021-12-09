@@ -3,7 +3,7 @@ import ImageGrid from "./comps/ImageGrid";
 import Modal from "./comps/Modal";
 import Title from "./comps/Title";
 import UploadForm from "./comps/UploadForm";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -12,7 +12,9 @@ function App() {
       <Title />
       <UploadForm />
       <ImageGrid setSelectedImg={setSelectedImg} />
-      {selectedImg && <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />}
+      {selectedImg && (
+        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+      )}
     </div>
   );
 }
